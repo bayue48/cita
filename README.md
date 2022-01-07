@@ -45,7 +45,7 @@ $ npm start
 To build the Docker image
 
 ```shell
-$ docker build . -t your_app_name .
+$ docker build -t your_app_name .
 ```
 
 If you want to start it as a container

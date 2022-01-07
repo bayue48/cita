@@ -89,6 +89,13 @@ DELETE .../users/:id
 For more info visit [Postman Documentation](https://documenter.getpostman.com/view/13522642/UVXeqdA9)
 Or [Postman Json Documentation](https://www.getpostman.com/collections/dd3439a743a4183e6410)
 
+## Demo User
+
+```
+username: admin
+password: admin
+```
+
 ## License
 
 Distributed under the MIT License.

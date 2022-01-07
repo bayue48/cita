@@ -64,7 +64,7 @@ And [http://yourhostname:3001/](http://localhost:3001/) for Auth Service
 
 There is two module for this API:
 
-- [AuthService](https://github.com/bayue48/tree/master/authService), contains API for user authentication,
+- [AuthService](https://github.com/bayue48/cita/tree/master/authService), contains API for user authentication,
 
 The user authentication is implemented using [JWT](https://jwt.io/)
 
@@ -73,7 +73,7 @@ The user authentication is implemented using [JWT](https://jwt.io/)
   POST .../users/auth/register
 ```
 
-- [UserService](https://github.com/bayue48/tree/master/userService), contains API for user CRUD operation
+- [UserService](https://github.com/bayue48/cita/tree/master/userService), contains API for user CRUD operation
 
 ```
    GET .../users/

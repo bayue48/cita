@@ -18,7 +18,7 @@ spec:
           image: auth-service
           imagePullPolicy: Never
           ports:
-            - containerPort: 3000
+            - containerPort: 3001
 
 ---
 apiVersion: v1
@@ -30,5 +30,5 @@ spec:
   selector:
     name: auth-service
   ports:
-    - port: 3000
-      targetPort: 3000
+    - port: 3001
+      targetPort: 3001

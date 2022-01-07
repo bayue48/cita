@@ -1,0 +1,2687 @@
+{
+	"info": {
+		"_postman_id": "f6982e81-a8dc-4396-8cd3-adc18d03eb18",
+		"name": "cita-api",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Auth",
+			"item": [
+				{
+					"name": "Register",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "username",
+									"value": "cita",
+									"type": "default"
+								},
+								{
+									"key": "password",
+									"value": "cita",
+									"type": "default"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://{{auth}}/api/auth/register",
+							"protocol": "http",
+							"host": [
+								"{{auth}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"register"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Admin",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "juta",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "juta",
+											"type": "text"
+										},
+										{
+											"key": "isAdmin",
+											"value": "true",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://{{auth}}/api/auth/register",
+									"protocol": "http",
+									"host": [
+										"{{auth}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "241"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f1-NpC5mqu+kdES6llxUfQkJE7gvuw\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Jan 2022 13:08:37 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"01\",\n    \"status\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"username\": \"juta\",\n        \"password\": \"$2b$10$zhTxnO1YlfPiAQ6dLjKQbufIX6pcyxk7VHkN6jdgSYPHD9GAFxjUy\",\n        \"isAdmin\": true,\n        \"updated\": \"2022-01-07T12:27:48.157Z\",\n        \"_id\": \"61d83b5511e480c70cfe1527\",\n        \"__v\": 0\n    }\n}"
+						},
+						{
+							"name": "Users",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "cita",
+											"type": "default"
+										},
+										{
+											"key": "password",
+											"value": "cita",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://{{auth}}/api/auth/register",
+									"protocol": "http",
+									"host": [
+										"{{auth}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "242"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f2-5Hhk3RTl4yN0SnPMPlr4QFgaSbE\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Jan 2022 12:38:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"01\",\n    \"status\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"username\": \"cita\",\n        \"password\": \"$2b$10$DS/uQlyyzXr5NEe8DdWvQ.kisKucM7G2o.Na035UCZC6GSs0SOUFW\",\n        \"isAdmin\": false,\n        \"updated\": \"2022-01-07T12:27:48.157Z\",\n        \"_id\": \"61d8344711e480c70cfe1519\",\n        \"__v\": 0\n    }\n}"
+						},
+						{
+							"name": "Username to short",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "ci",
+											"type": "default"
+										},
+										{
+											"key": "password",
+											"value": "cita",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://{{auth}}/api/auth/register",
+									"protocol": "http",
+									"host": [
+										"{{auth}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "109"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"6d-3JMeB4MGFogmYRk+/j3fhhG7OE4\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Jan 2022 12:40:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"02\",\n    \"status\": false,\n    \"message\": {\n        \"username\": \"Username must be at least 3 characters long\"\n    },\n    \"data\": null\n}"
+						},
+						{
+							"name": "Duplicate user",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "cita",
+											"type": "default"
+										},
+										{
+											"key": "password",
+											"value": "cita",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://{{auth}}/api/auth/register",
+									"protocol": "http",
+									"host": [
+										"{{auth}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "Conflict",
+							"code": 409,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "72"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"48-1hN/oVhjHlHRpduxgPzQZPnlaKY\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Jan 2022 12:41:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"02\",\n    \"status\": false,\n    \"message\": \"User already exists\",\n    \"data\": null\n}"
+						},
+						{
+							"name": "Empty body",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "cita",
+											"type": "default",
+											"disabled": true
+										},
+										{
+											"key": "password",
+											"value": "cita",
+											"type": "default",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://{{auth}}/api/auth/register",
+									"protocol": "http",
+									"host": [
+										"{{auth}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"register"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "120"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"78-H9sJowzq8E8609YSNFVpnIUcgNE\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Jan 2022 12:42:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"02\",\n    \"status\": false,\n    \"message\": {\n        \"password\": \"Password is required\",\n        \"username\": \"Username is required\"\n    },\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "http://{{auth}}/api/auth/login",
+							"protocol": "http",
+							"host": [
+								"{{auth}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Succes",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "cita",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "cita",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://{{auth}}/api/auth/login",
+									"protocol": "http",
+									"host": [
+										"{{auth}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "273"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"111-SHne1xGqQhAhVjf3mmoz9GBWRTs\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Jan 2022 12:47:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"01\",\n    \"status\": true,\n    \"message\": \"Success\",\n    \"data\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYxZDgzNDQ3MTFlNDgwYzcwY2ZlMTUxOSIsInVzZXJuYW1lIjoiY2l0YSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE2NDE1NTk2NTgsImV4cCI6MTY0MTY0NjA1OH0.PKBKVgkXZgIYnbPZnZ4S-wATg_OFNqfR-Uo9qH6gAGo\"\n}"
+						},
+						{
+							"name": "User not found",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "citas",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "cita",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://{{auth}}/api/auth/login",
+									"protocol": "http",
+									"host": [
+										"{{auth}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "67"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"43-pMkIFwdlT5deU3Fnd8frOuxlYyE\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Jan 2022 12:47:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"02\",\n    \"status\": false,\n    \"message\": \"User not found\",\n    \"data\": null\n}"
+						},
+						{
+							"name": "Failed",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "cita",
+											"type": "text"
+										},
+										{
+											"key": "password",
+											"value": "citas",
+											"type": "text"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://{{auth}}/api/auth/login",
+									"protocol": "http",
+									"host": [
+										"{{auth}}"
+									],
+									"path": [
+										"api",
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "86"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"56-+j6/GrmDelIMGx0jQHC00RYJFf0\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Jan 2022 12:48:20 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"02\",\n    \"status\": false,\n    \"message\": \"Username or password is incorrect\",\n    \"data\": null\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Crud",
+			"item": [
+				{
+					"name": "Get Currently Login User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "{{users}}",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{crud}}/api/users",
+							"protocol": "http",
+							"host": [
+								"{{crud}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Not admin",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://{{crud}}/api/users",
+									"protocol": "http",
+									"host": [
+										"{{crud}}"
+									],
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "75"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4b-pKSk5ZE8E0YOBvlcaVGJ+qlqR0I\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Jan 2022 12:52:32 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"01\",\n    \"status\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"username\": \"users\"\n    }\n}"
+						},
+						{
+							"name": "User admin",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://{{crud}}/api/users",
+									"protocol": "http",
+									"host": [
+										"{{crud}}"
+									],
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "156"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"9c-UtdMt7i4gJi9hWkqjHiqjhevUhg\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Jan 2022 12:54:17 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"01\",\n    \"status\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"id\": \"61d8245b3e95d53add0bfab5\",\n        \"username\": \"admin\",\n        \"isAdmin\": true,\n        \"iat\": 1641559009,\n        \"exp\": 1641645409\n    }\n}"
+						},
+						{
+							"name": "Invalid token",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://{{crud}}/api/users",
+									"protocol": "http",
+									"host": [
+										"{{crud}}"
+									],
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "69"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"45-lvL6N0QpSt/6MeAOLksnSCrsSwc\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Jan 2022 12:57:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"02\",\n    \"status\": false,\n    \"message\": \"Token is invalid\",\n    \"data\": null\n}"
+						},
+						{
+							"name": "No token",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://{{crud}}/api/users",
+									"protocol": "http",
+									"host": [
+										"{{crud}}"
+									],
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "65"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"41-H1Gz20LGh7oM880NGqlr9BLgtkU\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Jan 2022 13:04:38 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"02\",\n    \"status\": false,\n    \"message\": \"Unauthorized\",\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Currently Login User",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://{{crud}}/api/users",
+							"protocol": "http",
+							"host": [
+								"{{crud}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "No token",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "http://{{crud}}/api/users",
+									"protocol": "http",
+									"host": [
+										"{{crud}}"
+									],
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "65"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"41-H1Gz20LGh7oM880NGqlr9BLgtkU\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Jan 2022 13:11:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"02\",\n    \"status\": false,\n    \"message\": \"Unauthorized\",\n    \"data\": null\n}"
+						},
+						{
+							"name": "Empty body",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "http://{{crud}}/api/users",
+									"protocol": "http",
+									"host": [
+										"{{crud}}"
+									],
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "65"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"41-ywhhC6Oezypu5ciWJu+CNCVbdyU\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Jan 2022 13:11:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"02\",\n    \"status\": false,\n    \"message\": \"Invalid body\",\n    \"data\": null\n}"
+						},
+						{
+							"name": "Duplicate username",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "cita",
+											"type": "default"
+										},
+										{
+											"key": "password",
+											"value": "juta",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://{{crud}}/api/users",
+									"protocol": "http",
+									"host": [
+										"{{crud}}"
+									],
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"status": "Conflict",
+							"code": 409,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "72"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"48-1hN/oVhjHlHRpduxgPzQZPnlaKY\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Jan 2022 13:12:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"02\",\n    \"status\": false,\n    \"message\": \"User already exists\",\n    \"data\": null\n}"
+						},
+						{
+							"name": "Succes",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "pepih",
+											"type": "default"
+										},
+										{
+											"key": "password",
+											"value": "juta",
+											"type": "default",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://{{crud}}/api/users",
+									"protocol": "http",
+									"host": [
+										"{{crud}}"
+									],
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "243"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f3-B/ZK1AGOWJi2/QrOARdn2Y6IuIs\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Jan 2022 13:14:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"01\",\n    \"status\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"_id\": \"61d8344711e480c70cfe1519\",\n        \"username\": \"pepih\",\n        \"password\": \"$2b$10$DS/uQlyyzXr5NEe8DdWvQ.kisKucM7G2o.Na035UCZC6GSs0SOUFW\",\n        \"isAdmin\": false,\n        \"updated\": \"2022-01-07T12:27:48.157Z\",\n        \"__v\": 0\n    }\n}"
+						},
+						{
+							"name": "Verify user after update data",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "pepih",
+											"type": "default"
+										},
+										{
+											"key": "password",
+											"value": "juta",
+											"type": "default",
+											"disabled": true
+										}
+									]
+								},
+								"url": {
+									"raw": "http://{{crud}}/api/users",
+									"protocol": "http",
+									"host": [
+										"{{crud}}"
+									],
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "67"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"43-omGPxKMTfU5bdM9oqr0b8mkh4xc\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Jan 2022 13:15:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"02\",\n    \"status\": false,\n    \"message\": \"Please relogin\",\n    \"data\": null\n}"
+						},
+						{
+							"name": "Invalid token",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": []
+								},
+								"url": {
+									"raw": "http://{{crud}}/api/users",
+									"protocol": "http",
+									"host": [
+										"{{crud}}"
+									],
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "69"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"45-lvL6N0QpSt/6MeAOLksnSCrsSwc\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Jan 2022 13:19:30 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"02\",\n    \"status\": false,\n    \"message\": \"Token is invalid\",\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Currently Login User",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://{{crud}}/api/users",
+							"protocol": "http",
+							"host": [
+								"{{crud}}"
+							],
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "No token",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://{{crud}}/api/users",
+									"protocol": "http",
+									"host": [
+										"{{crud}}"
+									],
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "65"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"41-H1Gz20LGh7oM880NGqlr9BLgtkU\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Jan 2022 13:18:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"02\",\n    \"status\": false,\n    \"message\": \"Unauthorized\",\n    \"data\": null\n}"
+						},
+						{
+							"name": "Invalid token",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://{{crud}}/api/users",
+									"protocol": "http",
+									"host": [
+										"{{crud}}"
+									],
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "69"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"45-lvL6N0QpSt/6MeAOLksnSCrsSwc\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Jan 2022 13:19:50 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"02\",\n    \"status\": false,\n    \"message\": \"Token is invalid\",\n    \"data\": null\n}"
+						},
+						{
+							"name": "Succes",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://{{crud}}/api/users",
+									"protocol": "http",
+									"host": [
+										"{{crud}}"
+									],
+									"path": [
+										"api",
+										"users"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "155"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"9b-48MXrecQVL8ZuO/bIcYQHUeLxI0\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Jan 2022 13:20:29 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"01\",\n    \"status\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"id\": \"61d834ca11e480c70cfe151b\",\n        \"username\": \"cit\",\n        \"isAdmin\": false,\n        \"iat\": 1641561489,\n        \"exp\": 1641647889\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get All User",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{crud}}/api/users/all",
+							"protocol": "http",
+							"host": [
+								"{{crud}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"all"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Not admin",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://{{crud}}/api/users/all",
+									"protocol": "http",
+									"host": [
+										"{{crud}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"all"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "65"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"41-H1Gz20LGh7oM880NGqlr9BLgtkU\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Jan 2022 13:24:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"02\",\n    \"status\": false,\n    \"message\": \"Unauthorized\",\n    \"data\": null\n}"
+						},
+						{
+							"name": "Not login",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://{{crud}}/api/users/all",
+									"protocol": "http",
+									"host": [
+										"{{crud}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"all"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "65"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"41-H1Gz20LGh7oM880NGqlr9BLgtkU\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Jan 2022 13:25:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"02\",\n    \"status\": false,\n    \"message\": \"Unauthorized\",\n    \"data\": null\n}"
+						},
+						{
+							"name": "Succes",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://{{crud}}/api/users/all",
+									"protocol": "http",
+									"host": [
+										"{{crud}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"all"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "620"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"26c-XQnWRAR+mlpWdRm+3I+jOPUa0Xs\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Jan 2022 13:25:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"01\",\n    \"status\": true,\n    \"message\": \"Success\",\n    \"data\": [\n        {\n            \"_id\": \"61d8245b3e95d53add0bfab5\",\n            \"username\": \"admin\",\n            \"password\": \"$2b$10$vCUI8lHaceKSQW3mg4pE/u.JjdfKJuD4aZbQzgMOPUiT73/TQcEQm\",\n            \"isAdmin\": true,\n            \"updated\": \"2022-01-07T11:30:35.026Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"61d8344711e480c70cfe1519\",\n            \"username\": \"pepih\",\n            \"password\": \"$2b$10$DS/uQlyyzXr5NEe8DdWvQ.kisKucM7G2o.Na035UCZC6GSs0SOUFW\",\n            \"isAdmin\": false,\n            \"updated\": \"2022-01-07T12:27:48.157Z\",\n            \"__v\": 0\n        },\n        {\n            \"_id\": \"61d83b5511e480c70cfe1527\",\n            \"username\": \"juta\",\n            \"password\": \"$2b$10$zhTxnO1YlfPiAQ6dLjKQbufIX6pcyxk7VHkN6jdgSYPHD9GAFxjUy\",\n            \"isAdmin\": true,\n            \"updated\": \"2022-01-07T12:27:48.157Z\",\n            \"__v\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get User By Id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://{{crud}}/api/users/1",
+							"protocol": "http",
+							"host": [
+								"{{crud}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "No token",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://{{crud}}/api/users/61d83b5511e480c70cfe1527",
+									"protocol": "http",
+									"host": [
+										"{{crud}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"61d83b5511e480c70cfe1527"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "65"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"41-H1Gz20LGh7oM880NGqlr9BLgtkU\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Jan 2022 13:26:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"02\",\n    \"status\": false,\n    \"message\": \"Unauthorized\",\n    \"data\": null\n}"
+						},
+						{
+							"name": "Succes",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://{{crud}}/api/users/61d83b5511e480c70cfe1527",
+									"protocol": "http",
+									"host": [
+										"{{crud}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"61d83b5511e480c70cfe1527"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "241"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f1-aSk470x6rfzGTHN20B69vZWANjU\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Jan 2022 13:31:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"01\",\n    \"status\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"_id\": \"61d83b5511e480c70cfe1527\",\n        \"username\": \"juta\",\n        \"password\": \"$2b$10$zhTxnO1YlfPiAQ6dLjKQbufIX6pcyxk7VHkN6jdgSYPHD9GAFxjUy\",\n        \"isAdmin\": true,\n        \"updated\": \"2022-01-07T12:27:48.157Z\",\n        \"__v\": 0\n    }\n}"
+						},
+						{
+							"name": "Not Admin",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://{{crud}}/api/users/61d83b5511e480c70cfe1527",
+									"protocol": "http",
+									"host": [
+										"{{crud}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"61d83b5511e480c70cfe1527"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "65"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"41-H1Gz20LGh7oM880NGqlr9BLgtkU\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Jan 2022 13:31:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"02\",\n    \"status\": false,\n    \"message\": \"Unauthorized\",\n    \"data\": null\n}"
+						},
+						{
+							"name": "Not found",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://{{crud}}/api/users/61d83b5511e480c70cfe1526",
+									"protocol": "http",
+									"host": [
+										"{{crud}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"61d83b5511e480c70cfe1526"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "67"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"43-pMkIFwdlT5deU3Fnd8frOuxlYyE\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Jan 2022 13:32:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"02\",\n    \"status\": false,\n    \"message\": \"User not found\",\n    \"data\": null\n}"
+						},
+						{
+							"name": "Invalid token",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "http://{{crud}}/api/users/61d83b5511e480c70cfe1526",
+									"protocol": "http",
+									"host": [
+										"{{crud}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"61d83b5511e480c70cfe1526"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "69"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"45-lvL6N0QpSt/6MeAOLksnSCrsSwc\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Jan 2022 13:35:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"02\",\n    \"status\": false,\n    \"message\": \"Token is invalid\",\n    \"data\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Update User By Id",
+					"request": {
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://{{crud}}/api/users/61d83b5511e480c70cfe1526",
+							"protocol": "http",
+							"host": [
+								"{{crud}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"61d83b5511e480c70cfe1526"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "No token",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "http://{{crud}}/api/users/61d83b5511e480c70cfe1526",
+									"protocol": "http",
+									"host": [
+										"{{crud}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"61d83b5511e480c70cfe1526"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "65"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"41-H1Gz20LGh7oM880NGqlr9BLgtkU\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Jan 2022 13:34:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"02\",\n    \"status\": false,\n    \"message\": \"Unauthorized\",\n    \"data\": null\n}"
+						},
+						{
+							"name": "Empty body",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "http://{{crud}}/api/users/61d83b5511e480c70cfe1526",
+									"protocol": "http",
+									"host": [
+										"{{crud}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"61d83b5511e480c70cfe1526"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "65"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"41-ywhhC6Oezypu5ciWJu+CNCVbdyU\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Jan 2022 13:35:16 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"02\",\n    \"status\": false,\n    \"message\": \"Invalid body\",\n    \"data\": null\n}"
+						},
+						{
+							"name": "Invalid token",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "http://{{crud}}/api/users/61d83b5511e480c70cfe1526",
+									"protocol": "http",
+									"host": [
+										"{{crud}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"61d83b5511e480c70cfe1526"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "69"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"45-lvL6N0QpSt/6MeAOLksnSCrsSwc\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Jan 2022 13:36:27 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"02\",\n    \"status\": false,\n    \"message\": \"Token is invalid\",\n    \"data\": null\n}"
+						},
+						{
+							"name": "Not Admin",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"url": {
+									"raw": "http://{{crud}}/api/users/61d83b5511e480c70cfe1526",
+									"protocol": "http",
+									"host": [
+										"{{crud}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"61d83b5511e480c70cfe1526"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "65"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"41-H1Gz20LGh7oM880NGqlr9BLgtkU\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Jan 2022 13:36:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"02\",\n    \"status\": false,\n    \"message\": \"Unauthorized\",\n    \"data\": null\n}"
+						},
+						{
+							"name": "User not found",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "users",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://{{crud}}/api/users/61d83b5511e480c70cfe1526",
+									"protocol": "http",
+									"host": [
+										"{{crud}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"61d83b5511e480c70cfe1526"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "67"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"43-pMkIFwdlT5deU3Fnd8frOuxlYyE\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Jan 2022 13:39:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"02\",\n    \"status\": false,\n    \"message\": \"User not found\",\n    \"data\": null\n}"
+						},
+						{
+							"name": "Succes",
+							"originalRequest": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "urlencoded",
+									"urlencoded": [
+										{
+											"key": "username",
+											"value": "users",
+											"type": "default"
+										}
+									]
+								},
+								"url": {
+									"raw": "http://{{crud}}/api/users/61d83b5511e480c70cfe1527",
+									"protocol": "http",
+									"host": [
+										"{{crud}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"61d83b5511e480c70cfe1527"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "242"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f2-qiv8WhWAapukNI+2PaebSqTJOoQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Jan 2022 13:39:42 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"01\",\n    \"status\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"_id\": \"61d83b5511e480c70cfe1527\",\n        \"username\": \"users\",\n        \"password\": \"$2b$10$zhTxnO1YlfPiAQ6dLjKQbufIX6pcyxk7VHkN6jdgSYPHD9GAFxjUy\",\n        \"isAdmin\": true,\n        \"updated\": \"2022-01-07T12:27:48.157Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete User By Id",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://{{crud}}/api/users/61d83b5511e480c70cfe1526",
+							"protocol": "http",
+							"host": [
+								"{{crud}}"
+							],
+							"path": [
+								"api",
+								"users",
+								"61d83b5511e480c70cfe1526"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "No token",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://{{crud}}/api/users/61d83b5511e480c70cfe1526",
+									"protocol": "http",
+									"host": [
+										"{{crud}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"61d83b5511e480c70cfe1526"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "65"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"41-H1Gz20LGh7oM880NGqlr9BLgtkU\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Jan 2022 13:40:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"02\",\n    \"status\": false,\n    \"message\": \"Unauthorized\",\n    \"data\": null\n}"
+						},
+						{
+							"name": "Not Admin",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://{{crud}}/api/users/61d83b5511e480c70cfe1526",
+									"protocol": "http",
+									"host": [
+										"{{crud}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"61d83b5511e480c70cfe1526"
+									]
+								}
+							},
+							"status": "Unauthorized",
+							"code": 401,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "65"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"41-H1Gz20LGh7oM880NGqlr9BLgtkU\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Jan 2022 13:40:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"02\",\n    \"status\": false,\n    \"message\": \"Unauthorized\",\n    \"data\": null\n}"
+						},
+						{
+							"name": "User not found",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://{{crud}}/api/users/61d83b5511e480c70cfe1526",
+									"protocol": "http",
+									"host": [
+										"{{crud}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"61d83b5511e480c70cfe1526"
+									]
+								}
+							},
+							"status": "Not Found",
+							"code": 404,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "67"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"43-pMkIFwdlT5deU3Fnd8frOuxlYyE\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Jan 2022 13:41:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"02\",\n    \"status\": false,\n    \"message\": \"User not found\",\n    \"data\": null\n}"
+						},
+						{
+							"name": "Succes",
+							"originalRequest": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "http://{{crud}}/api/users/61d83b5511e480c70cfe1527",
+									"protocol": "http",
+									"host": [
+										"{{crud}}"
+									],
+									"path": [
+										"api",
+										"users",
+										"61d83b5511e480c70cfe1527"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "242"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"f2-qiv8WhWAapukNI+2PaebSqTJOoQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 07 Jan 2022 13:41:45 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"code\": \"01\",\n    \"status\": true,\n    \"message\": \"Success\",\n    \"data\": {\n        \"_id\": \"61d83b5511e480c70cfe1527\",\n        \"username\": \"users\",\n        \"password\": \"$2b$10$zhTxnO1YlfPiAQ6dLjKQbufIX6pcyxk7VHkN6jdgSYPHD9GAFxjUy\",\n        \"isAdmin\": true,\n        \"updated\": \"2022-01-07T12:27:48.157Z\",\n        \"__v\": 0\n    }\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}

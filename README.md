@@ -26,12 +26,14 @@ API build in [Express.js](https://expressjs.com/) with [MongoDB](https://www.mon
    ```
    This will install the dependencies inside `node_modules`
 
-### MongoDB configuration
+### Environment configuration
 
 Please create database and make the changes in the `.env` file.
 
 ```js 
+JWT_SECRET=YOUR_JWT_SECRET
 MONGO_URI=YOUR_MONGO_URI
+PORT=YOUR_APP_PORT
 ```
 
 ### Usage

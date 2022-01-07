@@ -78,8 +78,8 @@ The user authentication is implemented using [JWT](https://jwt.io/)
    GET .../users/all
    GET .../users/:id
   POST .../users/
-   PUT .../users/
-   PUT .../users/:id
+ PATCH .../users/
+ PATCH .../users/:id
 DELETE .../users/
 DELETE .../users/:id
 ```
